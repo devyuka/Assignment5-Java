@@ -29,4 +29,13 @@ public class Entry<K extends Comparable,V> {
         key = k;
         value = v;
     }
+
+    @Override
+    public String toString() {
+        return "Entry{" +
+                "key=" + key +
+                ", value=" + value +
+                '}';
+    }
+
 }
