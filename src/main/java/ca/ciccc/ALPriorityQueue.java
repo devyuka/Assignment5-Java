@@ -60,12 +60,7 @@ public class ALPriorityQueue <K extends Comparable, V> implements VCPriorityQueu
 
     @Override
     public VCPriorityQueue<K, V>  merge(VCPriorityQueue other) {
-
-        while(other.peek() != null){
-            Entry<K, V> entry = other.dequeueMin();
-            enqueue(entry.getKey(),entry.getValue());
-        }
-
+        elementData.addAll(((ALPriorityQueue)other).elementData);
         size += other.size();
         return this;
     }
